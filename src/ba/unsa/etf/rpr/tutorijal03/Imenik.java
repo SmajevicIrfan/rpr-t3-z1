@@ -1,7 +1,6 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Imenik {
     private Map<String, TelefonskiBroj> phonebook;
@@ -29,12 +28,12 @@ public class Imenik {
         return null;
     }
 
-    public String naSlovo(char s) {
+    public String naSlovo(char prvoSlovo) {
         StringBuilder ret = new StringBuilder();
 
         int counter = 1;
         for (Map.Entry<String, TelefonskiBroj> entry : phonebook.entrySet()) {
-            if (entry.getKey().charAt(0) == s) {
+            if (entry.getKey().charAt(0) == prvoSlovo) {
                 ret.append(String.format("%d. %s - %s\n", counter, entry.getKey(), entry.getValue().ispisi()));
                 counter++;
             }
@@ -42,4 +41,16 @@ public class Imenik {
 
         return ret.toString();
     }
+
+    /*public Set<String> izGrade(FiksniBroj.Grad grad) {
+        Set<String> ret = new TreeSet<>();
+
+        for (Map.Entry<String, TelefonskiBroj> entry : phonebook.entrySet()) {
+            if (entry.getValue() instanceof FiksniBroj && ((FiksniBroj) entry.getValue()).getGrad().equals(grad)) {
+
+            }
+        }
+
+        return ret;
+    }*/
 }
