@@ -16,7 +16,7 @@ public class FiksniBroj extends TelefonskiBroj {
 
         private final String callNumber;
 
-        public Grad (String pozivniBroj) {
+        Grad (String pozivniBroj) {
             this.callNumber = pozivniBroj;
         }
 
