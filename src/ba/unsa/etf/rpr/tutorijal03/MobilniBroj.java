@@ -1,6 +1,6 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
-public class MobilniBroj {
+public class MobilniBroj extends TelefonskiBroj {
 
     private int mobileNetwork;
     private String number;
@@ -8,7 +8,7 @@ public class MobilniBroj {
     public MobilniBroj(int mobilnaMreza, String broj) {
         if (mobilnaMreza < 60 || mobilnaMreza > 67)
             throw new IllegalArgumentException("Zadata mobilna mreza ne postoji");
-        
+
         this.mobileNetwork = mobilnaMreza;
         this.number = broj;
     }
