@@ -42,15 +42,27 @@ public class Imenik {
         return ret.toString();
     }
 
-    /*public Set<String> izGrade(FiksniBroj.Grad grad) {
+    public Set<String> izGrada(FiksniBroj.Grad grad) {
         Set<String> ret = new TreeSet<>();
 
         for (Map.Entry<String, TelefonskiBroj> entry : phonebook.entrySet()) {
             if (entry.getValue() instanceof FiksniBroj && ((FiksniBroj) entry.getValue()).getGrad().equals(grad)) {
-
+                ret.add(entry.getKey());
             }
         }
 
         return ret;
-    }*/
+    }
+
+    public Set<TelefonskiBroj> izGradaBrojevi(FiksniBroj.Grad grad) {
+        Set<TelefonskiBroj> ret = new TreeSet<>();
+
+        for (Map.Entry<String, TelefonskiBroj> entry : phonebook.entrySet()) {
+            if (entry.getValue() instanceof FiksniBroj && ((FiksniBroj) entry.getValue()).getGrad().equals(grad)) {
+                ret.add(entry.getValue());
+            }
+        }
+
+        return ret;
+    }
 }
