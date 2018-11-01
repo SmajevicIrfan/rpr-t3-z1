@@ -25,7 +25,16 @@ public class FiksniBroj extends TelefonskiBroj {
         }
     }
 
+    public Grad getGrad() {
+        return city;
+    }
+
     private Grad city;
+
+    public String getBroj() {
+        return number;
+    }
+
     private String number;
 
     public FiksniBroj(Grad grad, String broj) {
@@ -37,4 +46,6 @@ public class FiksniBroj extends TelefonskiBroj {
     public String ispisi() {
         return String.format("%s/%s", this.city.getPozivniBroj(), this.number);
     }
+
+
 }
