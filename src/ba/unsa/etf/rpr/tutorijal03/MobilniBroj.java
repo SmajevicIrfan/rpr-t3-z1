@@ -6,12 +6,15 @@ public class MobilniBroj {
     private String number;
     
     public MobilniBroj(int mobilnaMreza, String broj) {
+        if (mobilnaMreza < 60 || mobilnaMreza > 67)
+            throw new IllegalArgumentException("Zadata mobilna mreza ne postoji");
+        
         this.mobileNetwork = mobilnaMreza;
-        this.number = broj.clone();
+        this.number = broj;
     }
     
     @Override
     public String ispisi() {
-        return "0" + this.mobileNetwork + "/" + this.number;
+        return String.format("0%d/%s", this.mobileNetwork, this.number);
     }
 }
