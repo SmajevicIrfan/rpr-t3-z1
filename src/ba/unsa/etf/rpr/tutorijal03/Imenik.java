@@ -9,5 +9,9 @@ public class Imenik {
     public Imenik() {
         phonebook = new HashMap<>();
     }
+
+    public void dodaj(String ime, TelefonskiBroj broj) {
+        phonebook.put(ime, broj);
+    }
     
 }
