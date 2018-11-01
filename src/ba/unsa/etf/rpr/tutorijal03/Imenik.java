@@ -18,5 +18,15 @@ public class Imenik {
         TelefonskiBroj telefonskiBroj = phonebook.get(ime);
         return telefonskiBroj == null ? null : telefonskiBroj.ispisi();
     }
+
+    public String dajIme(TelefonskiBroj broj) {
+        for (Map.Entry<String, TelefonskiBroj> entry : phonebook.entrySet()) {
+            if (entry.getValue().compareTo(broj) == 0) {
+                return entry.getKey();
+            }
+        }
+
+        return null;
+    }
     
 }
