@@ -13,5 +13,10 @@ public class Imenik {
     public void dodaj(String ime, TelefonskiBroj broj) {
         phonebook.put(ime, broj);
     }
+
+    public String dajBroj(String ime) {
+        TelefonskiBroj telefonskiBroj = phonebook.get(ime);
+        return telefonskiBroj == null ? null : telefonskiBroj.ispisi();
+    }
     
 }
