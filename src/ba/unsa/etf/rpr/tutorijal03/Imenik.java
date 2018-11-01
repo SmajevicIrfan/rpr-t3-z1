@@ -28,5 +28,18 @@ public class Imenik {
 
         return null;
     }
-    
+
+    public String naSlovo(char s) {
+        StringBuilder ret = new StringBuilder();
+
+        int counter = 1;
+        for (Map.Entry<String, TelefonskiBroj> entry : phonebook.entrySet()) {
+            if (entry.getKey().charAt(0) == s) {
+                ret.append(String.format("%d. %s - %s\n", counter, entry.getKey(), entry.getValue().ispisi()));
+                counter++;
+            }
+        }
+
+        return ret.toString();
+    }
 }
