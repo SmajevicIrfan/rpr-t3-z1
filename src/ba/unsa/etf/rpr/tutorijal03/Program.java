@@ -76,7 +76,7 @@ public class Program {
 
             if (choice == 1) {
                 System.out.print("Unesite ime osobe koju zelite da dodate: ");
-                String name = lineScanner.nextLine();
+                String name = lineScanner.nextLine().trim();
 
                 TelefonskiBroj number = unesiBroj();
                 if (number != null) {
@@ -84,7 +84,7 @@ public class Program {
                 }
             } else if (choice == 2) {
                 System.out.print("Unesite ime osobe ciji broj trazite: ");
-                String name = lineScanner.nextLine();
+                String name = lineScanner.nextLine().trim();
 
                 String number = contacts.dajBroj(name);
                 if (number != null) {
